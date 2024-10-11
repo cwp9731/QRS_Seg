@@ -54,10 +54,10 @@ def evaluation_single(point_label, point_pred, tol):
             end_err = label[1] - pred[1]
             if abs(start_err) <= tol/2:
                 QRS_start_find = True
-                start_err_list.append(start_err)
+                start_err_list.append(start_err*2)
             if abs(end_err) <= tol/2:
                 QRS_end_find = True
-                end_err_list.append(end_err)
+                end_err_list.append(end_err*2)
             if (abs(start_err) <= tol/2) and (abs(end_err) <=tol/2):
                 QRS_start_and_end_find = True
         if QRS_start_find:
